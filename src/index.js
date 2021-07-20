@@ -1,13 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import reducer from '../src/reducers/reducer'
+
+import App from './App';
+import RulesFrame from './containers/RulesFrame'
+import PlayContainer from './containers/play/PlayContainer'
+
+let store = createStore(reducer);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <Provider store={store}>
+      <Route exact path="/" component={App} />
+      <Route exact path="/rules" component={RulesFrame} />
+      <Route exact path="/play" component={PlayContainer} />
+
+    </Provider>
+  </Router>,
   document.getElementById('root')
 );
 
