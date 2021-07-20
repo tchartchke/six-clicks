@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Iframe from 'react-iframe'
 
 class WikiFrame extends Component {
 
@@ -7,7 +7,16 @@ class WikiFrame extends Component {
 
   // https://en.wikipedia.org/w/index.php?action=render&title=Main_Page
     return(
-      <div>Wiki iframe should go in here please</div>
+      <div>
+        <Iframe url="https://en.wikipedia.org/w/index.php?action=render&title=Main_Page"
+        width="450px"
+        height="450px"
+        id="myId"
+        className="myClassname"
+        display="initial"
+        position="relative"/>
+
+      </div>
     );
   };
 }

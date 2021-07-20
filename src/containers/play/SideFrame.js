@@ -15,7 +15,7 @@ class SideFrame extends Component {
       <div>
         <Mission mission={mission}/>
         <ClickCounter clicks={clicks} />
-        {/* <Path path={path} /> */}
+        <Path path={path} />
       </div>    
     );
   };
