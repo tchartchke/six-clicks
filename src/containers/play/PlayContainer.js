@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import Header from '../../components/Header';
+
+import InitForm from '../../components/InitForm';
 
 class PlayContainer extends Component {
+  //  if inPlay
+  //    return start game
+  //  else
+  //    return init form to init states
+
   render () {
     return (
       <div>
-        <Header text={'Select End Points'} />
+        <InitForm />
         
-        
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/rules'>Rules</Link></li>
+
 
       </div>
     );
