@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom';
 
 import Header from '../components/Header';
 
+const endPoint = 'https://en.wikipedia.org/w/api.php'
+
 class InitForm extends Component {
   constructor () {
     super();
@@ -25,8 +27,37 @@ class InitForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    //do some dispatch action update state and go start the game
-    //if neither empty, check if valid
+
+    // for (const [key, value] of Object.entries(this.state)) {
+    //   if (value === '') {
+    //     this.setState( {
+    //       ...this.state,
+    //       // [key] : 'Special:Random' 
+    //     })
+    //   } else {
+    //     fetch(endPoint + '?action=parse&page='+ value + '&prop=text&format=json&origin=*')
+    //     .then(response => response.json())
+    //     .then(data => {
+    //       if (data.error){
+    //         console.log('cannot parse ' + key + 'ing point')
+    //         //
+    //       } else {
+
+    //       }
+    //     });
+    //     // `https://en.wikipedia.org/w/api.php?action=parse&page=${Mozart}&prop=text&formatversion=2&format=json`
+    //   }
+      
+    // }
+    //if start and end are valid
+    if (this.validMission(this.state)) {
+      this.props.startGame(this.state)
+    }
+    console.log('end of submit')
+  }
+
+  validMission(mission){
+    return true;
   }
 
   handleCheck = (e) => {

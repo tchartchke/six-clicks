@@ -1,15 +1,19 @@
+import { bindActionCreators } from "redux";
+
 export default function reducer(
   state = { 
     clicks : 0, 
     path : [], 
-    currPage : '', 
     inPlay : false , 
     mission : {}
   }, action) {
   switch (action.type) {
     case 'START_GAME':
-      //set mission, set inPlay to true, set currPage to mission.start, add mission.start to path
-      return { ...state };
+      return { ...state,
+        path : [action.mission.start],
+        inPlay : true,
+        mission : action.mission
+      };
     case 'NEXT_PAGE':
       //update current page, add page to path, increment # clicks, check if page matches goal
       return { ...state };

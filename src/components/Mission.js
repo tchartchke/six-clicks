@@ -4,7 +4,7 @@ import React from 'react';
 const Mission = props => {
   return(
     <div className="mission">
-      {props.start} to {props.end}
+      {props.mission.start} to {props.mission.end}
     </div>
   );
 }
