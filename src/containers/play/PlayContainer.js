@@ -16,7 +16,7 @@ class PlayContainer extends Component {
       return (
         <div>
           <SideFrame state={this.props}/>
-          <WikiFrame pageTitle={this.props.path[this.props.path.length - 1]}/>
+          <WikiFrame pageTitle={this.props.path[this.props.path.length - 1]} next={this.props.next}/>
         </div>
       )
     } else {
@@ -45,7 +45,8 @@ const mapStoreToProps = state => {
 const mapDispatchToProps = dispatch => {
   return (
     {
-      start: mission => dispatch({type: "START_GAME", mission})
+      start: mission => dispatch({type: "START_GAME", mission}),
+      next: page => dispatch({type: "NEXT_PAGE", page})
     }
   )
 }

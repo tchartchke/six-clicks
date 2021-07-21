@@ -4,7 +4,6 @@ import Mission from '../../components/Mission';
 import ClickCounter from '../../components/ClickCounter';
 import Path from '../../components/Path';
 
-
 class SideFrame extends Component {
 
   render() {
