@@ -1,7 +1,3 @@
-// import { bindActionCreators } from "redux";
-
-import { StaticRouter } from "react-router";
-
 export default function reducer(
   state = { 
     clicks : 0, 
@@ -19,12 +15,14 @@ export default function reducer(
     case 'NEXT_PAGE':
       return { ...state,
         clicks : state.clicks + 1,
-        path : state.path.concat(action.pageTitle) };
-
+        path : state.path.concat(action.pageTitle)
+      };
+    case 'END_GAME':
+      console.log("mission accomplished")
+      return {... state,
+        inPlay : false 
+      };
     default:
       return state;
   }
 }
-
-//new click
-//restart game

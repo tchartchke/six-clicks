@@ -22,9 +22,17 @@ class WikiFrame extends Component {
     e.preventDefault();
     console.log(e)
     const title = e.target.attributes.title.value
-    this.getHTML(title)
     this.props.next(title)
-  } 
+    if (this.missionComplete(title)){
+      this.props.endGame()
+    } else {
+      this.getHTML(title)
+    }
+  }
+
+  missionComplete(nextPage){
+    return this.props.end === nextPage
+  }
   
   render() {
 
