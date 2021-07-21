@@ -1,4 +1,6 @@
-import { bindActionCreators } from "redux";
+// import { bindActionCreators } from "redux";
+
+import { StaticRouter } from "react-router";
 
 export default function reducer(
   state = { 
@@ -15,8 +17,9 @@ export default function reducer(
         mission : action.mission
       };
     case 'NEXT_PAGE':
-      //update current page, add page to path, increment # clicks, check if page matches goal
-      return { ...state };
+      return { ...state,
+        clicks : state.clicks + 1,
+        path : state.path.concat(action.pageTitle) };
 
     default:
       return state;

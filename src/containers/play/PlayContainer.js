@@ -46,7 +46,7 @@ const mapDispatchToProps = dispatch => {
   return (
     {
       start: mission => dispatch({type: "START_GAME", mission}),
-      next: page => dispatch({type: "NEXT_PAGE", page})
+      next: pageTitle => dispatch({type: "NEXT_PAGE", pageTitle})
     }
   )
 }

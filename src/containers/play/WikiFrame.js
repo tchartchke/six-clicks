@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import parse from 'html-react-parser';
-import { Link } from 'react-router-dom';
 
 class WikiFrame extends Component {
   constructor(props) {
@@ -24,7 +23,7 @@ class WikiFrame extends Component {
     console.log(e)
     const title = e.target.attributes.title.value
     this.getHTML(title)
-    //increase page count
+    this.props.next(title)
   } 
   
   render() {
