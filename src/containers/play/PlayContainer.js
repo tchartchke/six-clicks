@@ -16,7 +16,7 @@ class PlayContainer extends Component {
       return (
         <div>
           <SideFrame state={this.props}/>
-          <WikiFrame />
+          <WikiFrame pageTitle={this.props.path[this.props.path.length - 1]}/>
         </div>
       )
     } else {
