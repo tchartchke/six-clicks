@@ -4,13 +4,11 @@ import { connect } from 'react-redux'
 import InitForm from '../../components/InitForm';
 import SideFrame from './SideFrame';
 import WikiFrame from './WikiFrame';
+import endGame from '../../components/EndGame'
+import EndGame from '../../components/EndGame';
 
 class PlayContainer extends Component {
-  //  if inPlay
-  //    return start game
-  //  else
-  //    return init form to init states
-  
+
   render () {
     if (this.props.inPlay){
       return (
@@ -20,15 +18,16 @@ class PlayContainer extends Component {
         </div>
       )
     } else {
+      if (this.props.gameOver) {
+        return (
+          <EndGame />
+        );
+      } else {
       return (
-        <div>
-          <InitForm startGame={this.props.start}/>
-          
-
-
-        </div>
+        <InitForm startGame={this.props.start}/>
       );
       }
+    }
   }
 }
 
@@ -38,6 +37,7 @@ const mapStoreToProps = state => {
         clicks : state.clicks, 
         path : state.path, 
         inPlay : state.inPlay, 
+        gameOver: state.gameOver,
         mission : state.mission}
   );
 }
