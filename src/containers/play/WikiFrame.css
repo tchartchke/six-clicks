@@ -1,0 +1,10 @@
+/* @import "../../css/wp-monobook.css"; */
+
+
+.wiki-frame{
+  background-color: bisque;
+}
+
+.wiki-frame .internal-link{
+  color: red;
+}

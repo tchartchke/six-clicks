@@ -1,7 +1,6 @@
-import '../../css/wp-commonPrint.css';
-// import '../../css/wp-common.css';
-// import '../../css/wp-monobook-main.css';
-import '../../css/wp-monobook.css';
+
+
+import './WikiFrame.css'
 
 import React, { Component } from 'react';
 import parse from 'html-react-parser';
