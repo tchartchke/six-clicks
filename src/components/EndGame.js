@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import SaveForm from './SaveForm';
 import PreviousPlays from './PreviousPlays';
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 class EndGame extends Component {
   constructor() {
     super();
@@ -11,13 +13,12 @@ class EndGame extends Component {
   }
 
   componentDidMount(){
-    fetch('http://localhost:3001/api/playthrus')
+    fetch(`${API_URL}/playthrus`)
       .then(response => response.json())
       .then(playthrus => this.setState({ playthrus }))
   }
 
   render() {
-    console.log(this.state)
     return (
       <div>You did it! <br></br>
       It took you {this.props.clicks} click(s) to get from {this.props.mission.start} to {this.props.mission.end}
