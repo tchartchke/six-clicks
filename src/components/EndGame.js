@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 class EndGame extends Component {
   render() {
     return (
-      <div>You made it to the end. <br></br>
-      It took you so many clicks.
+      <div>You did it! <br></br>
+      It took you {this.props.clicks} click(s) to get from {this.props.mission.start} to {this.props.mission.end}
         <ul>
         <li>Save you results</li>
         <li>Play this Mission again</li>

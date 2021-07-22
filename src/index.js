@@ -4,14 +4,15 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import reducer from '../src/reducers/reducer'
 
 import App from './App';
 import RulesFrame from './containers/RulesFrame'
-import PlayContainer from './containers/play/PlayContainer'
+import PlayContainer from './containers/PlayContainer'
 
-let store = createStore(reducer);
+let store = createStore(reducer, applyMiddleware(thunk));
 
 ReactDOM.render(
   <Router>

@@ -7,9 +7,8 @@ import Path from '../../components/Path';
 class SideFrame extends Component {
 
   render() {
-    const { clicks, path, inPlay, mission } = this.props.state
+    const { clicks, path, mission } = this.props.state
     
-  
     return(
       <div>
         <Mission mission={mission}/>

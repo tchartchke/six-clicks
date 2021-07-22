@@ -55,7 +55,7 @@ class InitForm extends Component {
   } 
 
   handleStartClick = () => {
-    this.props.startGame(this.state.mission)
+    this.props.initPage(this.state.mission)
   }
   
   validMission(){
