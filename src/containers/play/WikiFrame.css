@@ -2,9 +2,14 @@
 
 
 .wiki-frame{
-  background-color: bisque;
+  background-color: white;
+  padding-left: 240px;
 }
 
 .wiki-frame .internal-link{
-  color: red;
+  color: #0645ad;
+}
+
+a {
+  /* color: red; */
 }

@@ -1,0 +1,49 @@
+.sideFrame {
+  position: fixed;
+  height: 100vh;
+  width: 200px;
+
+  background-color: #f9f9f9;
+  border-right: 1px solid #a7d7f9;
+  padding: 1em 1em;
+}
+
+.sideFrame a:link{
+  font-size: 11px;
+  line-height: 13px;
+  word-wrap: break-word;
+}
+
+.sideFrame li{
+  list-style: none none;
+  text-align: -webkit-match-parent;
+}
+
+.sideFrame ul{
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  padding: 3.6px 0 0;
+}
+
+.sideFrame h3 {
+  display: block;
+  background-image: url(/src/portal-separator.png);
+  background-image: linear-gradient(to right,rgba(200,204,209,0) 0,#c8ccd1 33%,#c8ccd1 66%,rgba(200,204,209,0) 100%);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  color: #54595d;
+  margin: 0.5em 0 0 0.66666667em;
+  border: 0;
+  padding: 0.25em 0;
+  font-size: 12px;
+  font-weight: normal;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}

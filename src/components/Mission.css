@@ -1,0 +1,12 @@
+.mission p {
+  text-align: center;
+  font-size: 10px;
+}
+
+.mission div{
+  text-align: left;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: bold;
+  padding-bottom: 1em;
+}
