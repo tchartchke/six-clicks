@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
-import { fetchPage, initPage, endGame, savePlay, getPlaythrus, replayMission } from '../actions/actions'
+import { fetchPage, initPage, endGame, savePlay, getPlaythrus, replayMission, newMission } from '../actions/actions'
 
 import InitForm from '../components/InitForm';
 import SideFrame from './play/SideFrame';
@@ -21,7 +21,7 @@ class PlayContainer extends Component {
     } else {
       if (this.props.gameOver) {
         return (
-          <EndGame clicks={this.props.clicks} path={this.props.path} mission={this.props.mission} savePlay={this.props.savePlay} getPlaythrus={this.props.getPlaythrus} playthrus={this.props.playthrus} replayMission={this.props.replayMission}/>
+          <EndGame clicks={this.props.clicks} path={this.props.path} mission={this.props.mission} savePlay={this.props.savePlay} getPlaythrus={this.props.getPlaythrus} playthrus={this.props.playthrus} replayMission={this.props.replayMission} newMission={this.props.newMission}/>
         );
       } else {
       return (
@@ -53,7 +53,8 @@ const mapDispatchToProps = dispatch => {
       endGame: () => dispatch(endGame()),
       savePlay: (name, play) => dispatch(savePlay(name, play)),
       getPlaythrus: () => dispatch(getPlaythrus()),
-      replayMission: mission => dispatch(replayMission(mission))
+      replayMission: mission => dispatch(replayMission(mission)),
+      newMission: () => dispatch(newMission())
     }
   )
 }

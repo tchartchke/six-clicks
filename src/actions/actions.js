@@ -62,6 +62,9 @@ export function replayMission(mission) {
   return (dispatch) => {
     dispatch({ type: 'REPLAY_MISSION' })
     return initPage(mission)
-    
   }
+}
+
+export function newMission() {
+  return ({ type: 'NEW_MISSION' });
 }
