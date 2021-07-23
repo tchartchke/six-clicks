@@ -8,14 +8,14 @@ class InitForm extends Component {
     super();
     this.state = {
       mission: {
-        start : '',
-        end : ''},
-      valid : {
-        start : false,
-        end : false},
-      random : {
-        start : false,
-        end : false
+        start: '',
+        end: ''},
+      valid: {
+        start: false,
+        end: false},
+      random: {
+        start: false,
+        end: false
       }
     }
   }
@@ -23,12 +23,12 @@ class InitForm extends Component {
   handleChange = (e) => {
     this.setState( {
       ...this.state,
-      mission : { 
+      mission: { 
         ...this.state.mission,
-        [e.target.name] : e.target.value},
-      valid : { 
+        [e.target.name]: e.target.value},
+      valid: { 
         ...this.state.valid,
-        [e.target.name] : false }
+        [e.target.name]: false }
     });
   }
 
@@ -44,9 +44,9 @@ class InitForm extends Component {
             if (data.parse){
               this.setState({
                 ...this.state,
-                valid : {
+                valid: {
                   ...this.state.valid,
-                  [key] : true }
+                  [key]: true }
                 });
             }
           })        
@@ -69,12 +69,12 @@ class InitForm extends Component {
     .then(resp => resp.json()).then(data => 
       {
         this.setState({...this.state,
-          mission : {
+          mission: {
             ...this.state.mission,
-            [key] : data.query.random[0].title },
-          valid : {
+            [key]: data.query.random[0].title },
+          valid: {
             ...this.state.valid,
-            [key] : true }
+            [key]: true }
         })
       })
     .catch(error => {console.log(error);}); 
@@ -87,8 +87,8 @@ class InitForm extends Component {
     const rState = this.state.random[e.target.name]
     this.setState( {
       ...this.state,
-      random : { ...this.state.random,
-      [e.target.name] : !rState}
+      random: { ...this.state.random,
+      [e.target.name]: !rState}
     });
   }
 

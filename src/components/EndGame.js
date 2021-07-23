@@ -5,32 +5,35 @@ import PreviousPlays from './PreviousPlays';
 const API_URL = process.env.REACT_APP_API_URL;
 
 class EndGame extends Component {
-  constructor() {
-    super();
-    this.state = {
-      playthrus : []
-    }
-  }
+
+  // constructor(props) {
+  //   super();
+  //   this.state = {
+  //     playthrus: [props.playthrus]
+  //   }
+  //   debugger;
+  // }
 
   componentDidMount(){
-    fetch(`${API_URL}/playthrus`)
-      .then(response => response.json())
-      .then(playthrus => this.setState({ playthrus }))
+    this.props.getPlaythrus()
+    // debugger;
   }
 
   render() {
+    const { clicks, path, mission, playthrus } = this.props;
+    const save = { clicks, path, mission };
     return (
       <div>You did it! <br></br>
-      It took you {this.props.clicks} click(s) to get from {this.props.mission.start} to {this.props.mission.end}
+      It took you {clicks} click(s) to get from {mission.start} to {mission.end}
         
         <ul>
-        <li>Save your results</li> {/* makes api call to save */}
-        <SaveForm />
+        <li>Save your results</li>
+        <SaveForm save={save} savePlay={this.props.savePlay} getPlaythrus={this.props.getPlaythrus}/>
         <li>Play this Mission again</li> {/* plays game - sets init parameters */}
         <li>Play new Mission</li> {/* Link to bring you back to init form */}
         {/* displays previous plays */}
         </ul>
-        <PreviousPlays plays={this.state.playthrus}/>
+        <PreviousPlays plays={this.props.playthrus}/>
       </div>
     );
   }
