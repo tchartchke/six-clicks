@@ -57,3 +57,11 @@ export function getPlaythrus() {
       .catch(e => console.log(e));
     }
 }
+
+export function replayMission(mission) {
+  return (dispatch) => {
+    dispatch({ type: 'REPLAY_MISSION' })
+    return initPage(mission)
+    
+  }
+}

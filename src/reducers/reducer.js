@@ -11,11 +11,10 @@ export default function reducer(
   }, action) {
   switch (action.type) {
     case 'LOAD_PAGE':
-      return {...state,
+      return { ...state,
         requesting: true,
         path: [...state.path],
-        inPlay: true,
-        }  
+        inPlay: true } ;
     case 'PLAY_GAME':
       return { ...state,
         requesting: false,
@@ -42,8 +41,13 @@ export default function reducer(
     case 'GET_PLAYTHRUS':
       return {
         ...state,
-        playthrus: action.playthrus
-      }
+        playthrus: action.playthrus};
+    case 'REPLAY_MISSION':
+      return ({ ...state,
+        clicks: 0,
+        inPlay: true,
+        gameOver: false,
+      });
     default:
       return state;
   }

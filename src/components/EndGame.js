@@ -29,7 +29,7 @@ class EndGame extends Component {
         <ul>
         <li>Save your results</li>
         <SaveForm save={save} savePlay={this.props.savePlay} getPlaythrus={this.props.getPlaythrus}/>
-        <li>Play this Mission again</li> {/* plays game - sets init parameters */}
+        <li onClick={this.props.replayMission} >Play this Mission again</li> {/* plays game - sets init parameters */}
         <li>Play new Mission</li> {/* Link to bring you back to init form */}
         {/* displays previous plays */}
         </ul>
