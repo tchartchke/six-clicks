@@ -1,3 +1,4 @@
+import './InitForm.css';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -60,7 +61,7 @@ class InitForm extends Component {
   
   validMission(){
     if( this.state.valid.start === true && this.state.valid.end === true){
-      return (<button onClick={this.handleStartClick}>Begin Mission</button>);
+      return (<button className="playButton" onClick={this.handleStartClick}>Begin Mission</button>);
     }
   }
 
@@ -100,20 +101,23 @@ class InitForm extends Component {
     return (
       <div>
         <Header text={'Select Mission'} />
-        <form onSubmit={this.handleSubmit}>
-          <label>Start</label>
-          <input onChange={this.handleChange} type="text" name="start" value={this.state.mission.start} id="start-input"></input>
-          <input onChange={this.handleCheck} type="checkbox" name="start"></input>Randomize
-          <br></br>
-          <label>End</label>
-          <input onChange={this.handleChange} type="text" name="end" value={this.state.mission.end} id="end-input"></input>
-          <input onChange={this.handleCheck} type="checkbox" name="end"></input>Randomize
-          <br></br>
-          <input type="submit" value="Validate Mission"></input>
+        <form className="initForm" onSubmit={this.handleSubmit}>
+          <div className="initInput">
+            <input className="inputBox" onChange={this.handleChange} type="text" name="start" value={this.state.mission.start} placeholder="Starting Wikipedia Article Title" id="start-input"></input>
+            <input onChange={this.handleCheck} type="checkbox" name="start"></input>Randomize
+   
+            <input className="inputBox" onChange={this.handleChange} type="text" name="end" value={this.state.mission.end} placeholder="Ending Wikipedia Article Title" id="end-input"></input>
+            <input onChange={this.handleCheck} type="checkbox" name="end"></input>Randomize
+          </div>  
+        
+          <input className="validateButton" type="submit" value="Validate Mission"></input>
+          
+          { this.validMission() }
         </form>
-        { this.validMission() }
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/rules'>Rules</Link></li>
+        <div className="mainLink" >
+          <Link className="bigbutton home" to='/'>Home</Link>
+          <Link className="bigbutton box1" to='/rules'>Rules</Link>
+        </div>
       </div>
     );
   }

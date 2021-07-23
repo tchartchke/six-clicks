@@ -1,3 +1,4 @@
+import './SaveForm.css';
 import React, { Component } from 'react';
 
 class SaveForm extends Component {
@@ -32,7 +33,7 @@ class SaveForm extends Component {
       return (
         <form onSubmit={this.handleSubmit}>
           <label>Name</label>
-          <input onChange={this.handleChange} type="text" name="name" value={this.state.name}></input>
+          <inpu t onChange={this.handleChange} type="text" name="name" value={this.state.name}></inpu>
           <input type="submit" value="Save Results"></input>
         </form>);
     }

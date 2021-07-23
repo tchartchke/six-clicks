@@ -11,8 +11,8 @@ function App() {
       <img className="App-logo" src={logo} alt="Logo" />
       <Header text={'Six Clicks'} />
       <div className="mainLink" >
-        <Link className="box1" to='/rules'>Rules</Link>
-        <Link className="box2" to='/play'>Play</Link>
+        <Link className="bigbutton box1" to='/rules'>Rules</Link>
+        <Link className="bigbutton box2" to='/play'>Play</Link>
       </div>
     </div>
   );

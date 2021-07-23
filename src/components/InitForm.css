@@ -1,0 +1,51 @@
+.initForm {
+  margin: 0 1em;
+  padding-bottom: 1em;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #a5a7aa;
+}
+
+.initInput {
+  display: grid;
+  grid-template-columns: 1fr auto fit-content(100%);
+  width: 70%;
+  align-self:center;
+}
+
+input {
+  margin-bottom: 0.3em;
+}
+
+.inputBox {
+  width: auto;
+}
+
+.validateButton {
+  margin: 0.4em 1em;
+  font-size: 30px;
+  font-weight: bold;
+  background: #f2cedd;
+  border: 0.2rem solid #bfa3af;
+  padding: 0.5em 0.4em;
+}
+
+.validateButton:hover {
+  border-color: #f2cedd;
+  background: #fff5fa;
+}
+
+.playButton {
+  margin: 0.4em 1em;
+  font-size: 30px;
+  font-weight: bold;
+  background: #cef2e0;
+  border: 0.2rem solid #a3bfb1;
+  padding: 0.5em 0.4em;
+}
+
+.playButton:hover {
+  border-color: #cef2e0;
+  background: #f5fffa;
+}
