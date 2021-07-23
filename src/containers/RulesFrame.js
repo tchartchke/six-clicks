@@ -5,7 +5,7 @@ import Rules from '../components/Rules';
 class RulesFrame extends Component {
   render () {
     return( 
-      <div className="App">
+      <div className="">
         <Header text={'Rules'} />
         <Rules />
       </div>);

@@ -1,0 +1,8 @@
+.pageHead {
+  font-family: 'Linux Libertine', 'Georgia', 'Times', 'serif';
+  font-size: 4rem;
+  border-bottom: 1px solid #202122;
+  margin: 1rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}

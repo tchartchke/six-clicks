@@ -1,8 +1,9 @@
+import './Header.css';
 import React from 'react';
 
 const Header = props => {
   return(
-    <div>
+    <div className="pageHead">
       {props.text}
     </div>
   );

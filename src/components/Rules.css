@@ -1,0 +1,16 @@
+.RulesPage {
+  padding: 0em 2em;
+}
+
+.home{
+  text-align: center;
+  width: 100%;
+  padding: 1em 0.4em;
+  background: #cedff2;
+  border: 0.2rem solid #a3b0bf;
+}
+
+.home:hover{
+  border-color: #cedff2;
+  background: #f5faff;
+}
