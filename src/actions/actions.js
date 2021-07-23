@@ -23,8 +23,8 @@ export const fetchPage = (pageTitle) => {
   }
 }
 
-export function endGame() {
-  return ({type: 'END_GAME'});
+export function endGame(pageTitle) {
+  return ({type: 'END_GAME', pageTitle});
 }
 
 export function savePlay(name, play) {

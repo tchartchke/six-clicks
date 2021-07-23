@@ -11,7 +11,7 @@ class WikiFrame extends Component {
     e.preventDefault();
     const title = e.target.attributes.title.value
     if (this.missionComplete(title)){
-      this.props.endGame()
+      this.props.endGame(title)
     } else {
       this.props.next(title)
     }
