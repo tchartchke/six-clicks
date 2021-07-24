@@ -43,13 +43,16 @@ export default function reducer(
         playthrus: action.playthrus};
     case 'REPLAY_MISSION':
       return ({ ...state,
-        clicks: 0,
-        inPlay: true,
-        gameOver: false,
-      });
+          clicks: 0, 
+          path: [], 
+          inPlay: true,
+          gameOver: false, 
+          currHTML: '',
+        });
     case 'NEW_MISSION':
     return ({ ...state,
       clicks: 0,
+      path: [],
       gameOver: false,
     });
     default:

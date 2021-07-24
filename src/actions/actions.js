@@ -61,7 +61,11 @@ export function getPlaythrus() {
 export function replayMission(mission) {
   return (dispatch) => {
     dispatch({ type: 'REPLAY_MISSION' })
-    return initPage(mission)
+    fetch(`${wikiBase}action=parse&page=${mission.start}&prop=text&formatversion=2&format=json&origin=*`)
+      .then(response => response.json())
+      .then(data => {
+        dispatch({ type: 'PLAY_GAME', mission, currHTML: data.parse.text })
+      }).catch(e => console.log(e))
   }
 }
 

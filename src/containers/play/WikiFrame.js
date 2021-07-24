@@ -1,6 +1,7 @@
 
 
 import './WikiFrame.css'
+import Header from '../../components/Header';
 
 import React, { Component } from 'react';
 import parse from 'html-react-parser';
@@ -26,6 +27,8 @@ class WikiFrame extends Component {
 
     return(
       <div className="wiki-frame"> 
+        
+        <Header text={this.props.pageTitle} />
         {
           parse(this.props.currHTML, 
           { 
