@@ -162,11 +162,11 @@ table.listing td {
     border: 1pt solid black;
     border-collapse: collapse;
 }
-
+/* 
 a {
     color: Black !important;
     padding: 0 !important
-}
+} */
 
 a:link, a:visited {
     color: #520;

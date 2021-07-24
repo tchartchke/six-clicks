@@ -1,7 +1,6 @@
+/* @import "../../css/wp-commonPrint.css"; */
 @import "../../css/wp-common.css";
-@import "../../css/wp-monobook.css";
 @import "../../css/wp-monobook-main.css";
-@import "../../css/wp-commonPrint.css";
 
 
 
@@ -11,7 +10,7 @@
   padding-right: 10px;
 }
 
-.wiki-frame .internal-link{
+.wiki-frame a.internal-link{
   color: #0645ad;
 }
 
