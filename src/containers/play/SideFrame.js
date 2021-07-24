@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
+// import { connect } from 'react-redux'
 import Mission from '../../components/Mission';
 import ClickCounter from '../../components/ClickCounter';
 import Path from '../../components/Path';
@@ -11,12 +11,16 @@ import { Link } from 'react-router-dom';
 
 class SideFrame extends Component {
 
+  handleClick = () => {
+    this.props.restart()
+  }
+
   render() {
     const { clicks, path, mission } = this.props.state
     return(
       <div className="sideFrame">
         
-        <Link to="/"><img src={logo} alt="Logo" /></Link>
+        <Link onClick={this.handleClick} to="/"><img src={logo} alt="Logo" /></Link>
 
         <Mission mission={mission}/>
         <ClickCounter clicks={clicks} />
@@ -26,4 +30,4 @@ class SideFrame extends Component {
   };
 }
 
-export default connect()(SideFrame)
+export default (SideFrame)

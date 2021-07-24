@@ -51,9 +51,13 @@ export default function reducer(
         });
     case 'NEW_MISSION':
     return ({ ...state,
-      clicks: 0,
-      path: [],
-      gameOver: false,
+      requesting: false,
+      clicks: 0, 
+      path: [], 
+      inPlay: false , 
+      gameOver: false, 
+      mission: {}, 
+      currHTML: ''
     });
     default:
       return state;

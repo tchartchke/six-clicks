@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
-import { fetchPage, initPage, endGame } from '../actions/actions'
+import { fetchPage, initPage, endGame , newMission} from '../actions/actions'
 
 import InitForm from '../components/InitForm';
 import SideFrame from './play/SideFrame';
@@ -14,7 +14,7 @@ class PlayContainer extends Component {
     if (this.props.inPlay){
       return (
         <div>
-          <SideFrame state={this.props}/>
+          <SideFrame state={this.props} restart={this.props.newMission}/>
           <WikiFrame pageTitle={this.props.mission.start} next={this.props.fetchPage} end={this.props.mission.end} endGame={this.props.endGame} currHTML={this.props.currHTML}/>
         </div>
       )
@@ -53,7 +53,7 @@ const mapDispatchToProps = dispatch => {
       // savePlay: (name, play) => dispatch(savePlay(name, play)),
       // getPlaythrus: () => dispatch(getPlaythrus()),
       // replayMission: mission => dispatch(replayMission(mission)),
-      // newMission: () => dispatch(newMission())
+      newMission: () => dispatch(newMission())
     }
   )
 }
