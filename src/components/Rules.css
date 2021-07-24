@@ -3,6 +3,7 @@
 }
 
 a.bigbutton.box3{
+  color: black;
   text-align: center;
   width: 100%;
   padding: 1em 0.4em;
@@ -33,7 +34,6 @@ p {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   margin: 0.5em 0;
-  /* font-size: calc(1em * 0.875); */
   line-height: 1.6;
 }
 

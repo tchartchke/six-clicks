@@ -27,13 +27,13 @@ class SaveForm extends Component {
 
   render() {
     if (this.state.submitted) {
-      return <div>Saved!</div>;
+      return <div className="saveForm">Saved!</div>;
     }
     else {
       return (
-        <form onSubmit={this.handleSubmit}>
-          <label>Name</label>
-          <inpu t onChange={this.handleChange} type="text" name="name" value={this.state.name}></inpu>
+        <form className="saveForm" onSubmit={this.handleSubmit}>
+          Save Your Results
+          <input onChange={this.handleChange} placeholder="Name" type="text" name="name" value={this.state.name}></input>
           <input type="submit" value="Save Results"></input>
         </form>);
     }

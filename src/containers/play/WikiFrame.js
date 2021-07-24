@@ -13,6 +13,7 @@ class WikiFrame extends Component {
     if (this.missionComplete(title)){
       this.props.endGame(title)
     } else {
+      window.scrollTo(0,0)
       this.props.next(title)
     }
   }

@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { savePlay, getPlaythrus, replayMission, newMission } from '../actions/actions'
+import './EndGame.css';
 
 import SaveForm from './SaveForm';
 import PreviousPlays from './PreviousPlays';
+import Header from './Header';
 
 class EndGame extends Component {
 
@@ -15,16 +17,20 @@ class EndGame extends Component {
     const { clicks, path, mission } = this.props;
     const save = { clicks, path, mission };
     return (
-      <div>You did it! <br></br>
-      It took you {clicks} click(s) to get from {mission.start} to {mission.end}
+      <div className="endGame">
+
+        <Header text={"Congrats! You made it!"}/>
+        <h1>
+          It took you <b>{clicks} click(s)</b> to get from <b>{mission.start}</b> to <b>{mission.end}</b>
+        </h1>
         
-        <ul>
-        <li>Save your results</li>
         <SaveForm save={save} savePlay={this.props.savePlay} getPlaythrus={this.props.getPlaythrus}/>
-        <li><a href="#" onClick={this.props.replayMission}>Play this Mission again</a></li> {/* plays game - sets init parameters */}
-        <li><a href="#" onClick={this.props.newMission}>Play new Mission </a></li> {/* newMission */}
-        {/* displays previous plays */}
-        </ul>
+        <div>
+          <a href="#" onClick={this.props.replayMission}>Play this Mission again</a>
+        </div>  
+        <div>
+          <a href="#" onClick={this.props.newMission}>Play new Mission </a>
+        </div>
         <PreviousPlays plays={this.props.playthrus}/>
       </div>
     );

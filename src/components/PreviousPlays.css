@@ -1,0 +1,8 @@
+.previousPlays {
+  margin-top: 1em;
+}
+
+.previousPlays div {
+  display: flex;
+  flex-direction: column;
+}

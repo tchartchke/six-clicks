@@ -73,6 +73,10 @@ table {
 	/* we don't want the bottom borders of <h2>s to be visible through
 	   floated tables */
 	background-color: white;
+	display: table;
+	box-sizing: border-box;
+	text-indent: initial;
+	border-spacing: 2px;
 }
 a {
 	text-decoration: none;
@@ -80,7 +84,7 @@ a {
 	background: none;
 }
 a:visited {
-	color: #5a3696;
+	color: #76688b;
 }
 a:active {
 	color: #faa700;
@@ -154,7 +158,7 @@ ul {
 	list-style-type: square;
 	margin: .3em 0 0 1.5em;
 	padding: 0;
-	list-style-image: url(./resources/bullet.gif);
+	/* list-style-image: url(./resources/bullet.gif); */
 }
 ol {
 	line-height: 1.5em;
