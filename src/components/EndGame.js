@@ -26,10 +26,10 @@ class EndGame extends Component {
         
         <SaveForm save={save} savePlay={this.props.savePlay} getPlaythrus={this.props.getPlaythrus}/>
         <div>
-          <a href="#" onClick={() => this.props.replayMission(mission)}>Play this Mission again</a>
+          <a href="/play" onClick={() => this.props.replayMission(mission)}>Play this Mission again</a>
         </div>  
         <div>
-          <a href="#" onClick={this.props.newMission}>Play new Mission </a>
+          <a href="/play" onClick={this.props.newMission}>Play new Mission </a>
         </div>
         <PreviousPlays plays={this.props.playthrus}/>
       </div>

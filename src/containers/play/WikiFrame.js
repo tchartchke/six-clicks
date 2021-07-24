@@ -4,8 +4,7 @@ import './WikiFrame.css'
 import Header from '../../components/Header';
 
 import React, { Component } from 'react';
-// import parse from 'html-react-parser';
-import Interweave, { Node } from 'interweave';
+import Interweave from 'interweave';
 
 class WikiFrame extends Component {
 
@@ -38,36 +37,9 @@ class WikiFrame extends Component {
   
   
   render() {
-    // debugger;
     return(
       <div className="wiki-frame"> 
-        
         <Header text={this.props.pageTitle} />
-        {/* {
-          parse(this.props.currHTML, 
-          { 
-            trim: true,
-            replace: domNode => {
-              if (domNode.name === 'style'){
-                return (<div></div>);
-              }
-              // try to remove the style={} in the nodes
-              // if (domNode.attribs.style){
-              //   delete domNode.attribs.style
-              // }
-              if (domNode.name === 'a' && domNode.children[0] && domNode.attribs.title && domNode.attribs.href && domNode.attribs.href === `/wiki/${domNode.attribs.title.replaceAll(' ', "_")}`) {
-                  return (
-                    <a className="internal-link" href={domNode.attribs.href} title={domNode.attribs.title} onClick={this.handleClick}>
-                      {domNode.children[0].data}
-                    </a>
-                  )
-              }
-            },
-          })
-        } */}
-
-        {/* {<div dangerouslySetInnerHTML={{__html: this.props.currHTML}} />} */}
-
         { <Interweave content={this.props.currHTML} transform={this.transform}/> }
       </div>
     );

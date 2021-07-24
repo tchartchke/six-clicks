@@ -6,7 +6,7 @@ const PreviousPlays = (props) => (
   <div className="previousPlays">
     <h2>Previously Played Missions</h2>
     <div>
-      <table class="wikitable sortable">
+      <table className="wikitable sortable">
         <tbody>
           <tr>
             <th>Name</th>
