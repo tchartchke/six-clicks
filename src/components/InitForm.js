@@ -66,7 +66,7 @@ class InitForm extends Component {
   }
 
   getRandom(key){
-    return fetch('https://en.wikipedia.org/w/api.php?action=query&list=random&rnlimit=1&format=json&origin=*')
+    return fetch('https://en.wikipedia.org/w/api.php?action=query&list=random&rnnamespace=0&rnlimit=1&format=json&origin=*')
     .then(resp => resp.json()).then(data => 
       {
         this.setState({...this.state,
