@@ -115,7 +115,7 @@ class InitForm extends Component {
           { this.validMission() }
         </form>
         <div className="mainLink" >
-          <Link className="bigbutton home" to='/'>Home</Link>
+          <Link className="bigbutton box3" to='/'>Home</Link>
           <Link className="bigbutton box1" to='/rules'>Rules</Link>
         </div>
       </div>

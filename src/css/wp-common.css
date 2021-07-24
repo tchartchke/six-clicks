@@ -955,7 +955,7 @@ body.mediawiki .compact-ambox table.mbox-small-left {
 	display: list-item;
 	line-height: 1.5em;
 	list-style-type: square;
-	list-style-image: url(/w/skins/MonoBook/resources/images/bullet.svg);
+	list-style-image: url(./resources/bullet.svg);
 }
 
 /* Allow for hiding text in compact form */

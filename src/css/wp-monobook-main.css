@@ -154,7 +154,7 @@ ul {
 	list-style-type: square;
 	margin: .3em 0 0 1.5em;
 	padding: 0;
-	list-style-image: url(bullet.gif);
+	list-style-image: url(./resources/bullet.gif);
 }
 ol {
 	line-height: 1.5em;
@@ -593,31 +593,31 @@ span.diffchange {
 */
 #bodyContent a.external,
 #bodyContent a[href ^="gopher://"] {
-	background: url(external.png) center right no-repeat;
+	/* background: url(external.png) center right no-repeat; */
 	padding-right: 13px;
 }
 #bodyContent a[href ^="https://"],
 .link-https {
-	background: url(lock_icon.gif) center right no-repeat;
+	/* background: url(lock_icon.gif) center right no-repeat; */
 	padding-right: 16px;
 }
 #bodyContent a[href ^="mailto:"],
 .link-mailto {
-	background: url(mail_icon.gif) center right no-repeat;
+	/* background: url(mail_icon.gif) center right no-repeat; */
 	padding-right: 18px;
 }
 #bodyContent a[href ^="news://"] {
-	background: url(news_icon.png) center right no-repeat;
+	/* background: url(news_icon.png) center right no-repeat; */
 	padding-right: 18px;
 }
 #bodyContent a[href ^="ftp://"],
 .link-ftp {
-	background: url(file_icon.gif) center right no-repeat;
+	/* background: url(file_icon.gif) center right no-repeat; */
 	padding-right: 18px;
 }
 #bodyContent a[href ^="irc://"],
 .link-irc {
-	background: url(discussionitem_icon.gif) center right no-repeat;
+	/* background: url(discussionitem_icon.gif) center right no-repeat; */
 	padding-right: 18px;
 }
 #bodyContent a.external[href $=".ogg"], #bodyContent a.external[href $=".OGG"],
@@ -627,7 +627,7 @@ span.diffchange {
 #bodyContent a.external[href $=".wav"], #bodyContent a.external[href $=".WAV"],
 #bodyContent a.external[href $=".wma"], #bodyContent a.external[href $=".WMA"],
 .link-audio {
-	background: url("audio.png") center right no-repeat;
+	/* background: url("audio.png") center right no-repeat; */
 	padding-right: 13px;
 }
 #bodyContent a.external[href $=".ogm"], #bodyContent a.external[href $=".OGM"],
@@ -635,14 +635,14 @@ span.diffchange {
 #bodyContent a.external[href $=".mpeg"], #bodyContent a.external[href $=".MPEG"],
 #bodyContent a.external[href $=".mpg"], #bodyContent a.external[href $=".MPG"],
 .link-video {
-	background: url("video.png") center right no-repeat;
+	/* background: url("video.png") center right no-repeat; */
 	padding-right: 13px;
 }
 #bodyContent a.external[href $=".pdf"], #bodyContent a.external[href $=".PDF"],
 #bodyContent a.external[href *=".pdf#"], #bodyContent a.external[href *=".PDF#"],
 #bodyContent a.external[href *=".pdf?"], #bodyContent a.external[href *=".PDF?"],
 .link-document {
-	background: url("document.png") center right no-repeat;
+	/* background: url("document.png") center right no-repeat; */
 	padding-right: 12px;
 }
 
@@ -722,7 +722,7 @@ special external link styling */
 .portlet ul {
 	line-height: 1.5em;
 	list-style-type: square;
-	list-style-image: url(bullet.gif);
+	list-style-image: url(./resources/bullet.gif);
 	font-size: 95%;
 }
 .portlet li {
@@ -883,7 +883,7 @@ in bg url to hide it from iemac */
 li#pt-userpage,
 li#pt-anonuserpage,
 li#pt-login {
-	background: url(user.gif) top left no-repeat;
+	/* background: url(user.gif) top left no-repeat; */
 	padding-left: 20px;
 	text-transform: none;
 }

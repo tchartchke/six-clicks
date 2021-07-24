@@ -125,8 +125,8 @@ ul {
     margin: 0 ! important;
 }
 #footer {
-	background: white;
-	color: black;
+	background : white;
+	color : black;
     border-top: 1px solid black;
 }
 
@@ -153,8 +153,8 @@ pre {
     font-size: 8pt;
     overflow: auto;
     padding: 1em 0;
-	background: white;
-	color: black;
+	background : white;
+	color : black;
 }
 
 table.listing,
@@ -185,8 +185,8 @@ a:link, a:visited {
 }
 
 #content {
-	background: white;
-	color: black;
+	background : white;
+	color : black;
 }
 
 #column-content {

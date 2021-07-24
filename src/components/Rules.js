@@ -18,7 +18,7 @@ const Rules = () => {
         </ul>
         <div className="mainLink">
           <Link className="bigbutton box2" to='/play'>Play</Link>
-          <Link className="bigbutton home" to='/'>Home</Link>
+          <Link className="bigbutton box3" to='/'>Home</Link>
           </div>
       </div>
   );
