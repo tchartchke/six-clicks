@@ -10,8 +10,8 @@ const PreviousPlays = (props) => (
         <tbody>
           <tr>
             <th>Name</th>
-            <th>Mission Start</th>
-            <th>Mission End</th>
+            <th>Start</th>
+            <th>End</th>
             <th>Clicks</th>
           </tr>
           {props.plays.map(playthru => <Playthru key={playthru.id} playthru={playthru}/>)}

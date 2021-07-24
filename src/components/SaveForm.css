@@ -1,3 +1,7 @@
 .saveForm{
   margin-top: 1em;
 }
+
+.saveForm input {
+  margin: 0 0.2em;
+}
