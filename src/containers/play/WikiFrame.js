@@ -28,13 +28,13 @@ class WikiFrame extends Component {
     return(
       <div className="wiki-frame"> 
         
-        <Header text={this.props.pageTitle} />
+        {/* <Header text={this.props.pageTitle} /> */}
         {
           parse(this.props.currHTML, 
           { 
             trim: true,
             replace: domNode => {
-              if (domNode.name === 'a' && domNode.children[0] && domNode.attribs.title) {
+              if (domNode.name === 'a' && domNode.children[0] && domNode.attribs.title && domNode.attribs.href && domNode.attribs.href === `/wiki/${domNode.attribs.title.replaceAll(' ', "_")}`) {
                   return (
                     <a className="internal-link" href={domNode.attribs.href} title={domNode.attribs.title} onClick={this.handleClick}>
                       {domNode.children[0].data}
