@@ -16,7 +16,6 @@ class PlayContainer extends Component {
         <div>
           <SideFrame state={this.props} restart={this.props.newMission}/>
           <WikiFrame pageTitle={this.props.path[this.props.path.length-1]} next={this.props.fetchPage} end={this.props.mission.end} endGame={this.props.endGame} currHTML={this.props.currHTML}/>
-          {/* <WikiFrame pageTitle={this.props.mission.start} next={this.props.fetchPage} end={this.props.mission.end} endGame={this.props.endGame} currHTML={this.props.currHTML}/> */}
         </div>
       )
     } else {

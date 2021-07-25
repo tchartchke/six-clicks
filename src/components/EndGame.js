@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { savePlay, getPlaythrus, replayMission, newMission } from '../actions/actions'
+import { savePlay, getPlaythrus, /*replayMission, */newMission } from '../actions/actions'
 import './EndGame.css';
 
 import SaveForm from './SaveForm';
@@ -25,9 +25,9 @@ class EndGame extends Component {
         </h1>
         
         <SaveForm save={save} savePlay={this.props.savePlay} getPlaythrus={this.props.getPlaythrus}/>
-        <div>
+        {/* <div>
           <a href="/play" onClick={() => this.props.replayMission(mission)}>Play this Mission again</a>
-        </div>  
+        </div>   */}
         <div>
           <a href="/play" onClick={this.props.newMission}>Play new Mission </a>
         </div>
@@ -52,7 +52,7 @@ const mapDispatchToProps = dispatch => {
     {
       savePlay: (name, play) => dispatch(savePlay(name, play)),
       getPlaythrus: () => dispatch(getPlaythrus()),
-      replayMission: mission => dispatch(replayMission(mission)),
+      // replayMission: mission => dispatch(replayMission(mission)),
       newMission: () => dispatch(newMission())
     }
   )

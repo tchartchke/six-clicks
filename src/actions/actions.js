@@ -1,10 +1,12 @@
 const wikiBase = 'https://en.wikipedia.org/w/api.php?'
 const API_URL = process.env.REACT_APP_API_URL;
 
+const url = (page) => `${wikiBase}action=parse&page=${page}&prop=text&formatversion=2&format=json&origin=*`
+
 export const initPage = (mission) => {
   return (dispatch) => {
     dispatch({ type: 'LOAD_PAGE' })
-    fetch(`${wikiBase}action=parse&page=${mission.start}&prop=text&formatversion=2&format=json&origin=*`)
+    fetch(url(mission.start))
       .then(response => response.json())
       .then(data => {
         dispatch({ type: 'PLAY_GAME', mission, currHTML: data.parse.text })
@@ -15,7 +17,7 @@ export const initPage = (mission) => {
 export const fetchPage = (pageTitle) => {
   return (dispatch) => {
     dispatch({ type: 'LOAD_PAGE' })
-    fetch(`${wikiBase}action=parse&page=${pageTitle}&prop=text&formatversion=2&format=json&origin=*`)
+    fetch(url(pageTitle))
       .then(response => response.json())
       .then(data => {
         dispatch({ type: 'NEXT_PAGE', pageTitle:pageTitle, currHTML: data.parse.text })
@@ -58,16 +60,19 @@ export function getPlaythrus() {
     }
 }
 
-export function replayMission(mission) {
-  return (dispatch) => {
-    dispatch({ type: 'REPLAY_MISSION' })
-    fetch(`${wikiBase}action=parse&page=${mission.start}&prop=text&formatversion=2&format=json&origin=*`)
-      .then(response => response.json())
-      .then(data => {
-        dispatch({ type: 'PLAY_GAME', mission, currHTML: data.parse.text })
-      }).catch(e => console.log(e))
-  }
-}
+// export function replayMission(mission) {
+//   return (dispatch) => {
+//     dispatch({ type: 'REPLAY_MISSION' })
+//     fetch(`${wikiBase}action=parse&page=${mission.start}&prop=text&formatversion=2&format=json&origin=*`)
+//       .then(response => {
+//         debugger;
+//         return response.json()})
+//       .then(data => {
+        
+//         dispatch({ type: 'PLAY_GAME', mission, currHTML: data.parse.text })
+//       }).catch(e => console.log(e))
+//   }
+// }
 
 export function newMission() {
   return ({ type: 'NEW_MISSION' });
