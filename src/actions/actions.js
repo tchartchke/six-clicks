@@ -1,5 +1,5 @@
 const wikiBase = 'https://en.wikipedia.org/w/api.php?'
-const API_URL = REACT_APP_API_URL;
+const API_URL = process.env.REACT_APP_API_URL;
 
 export const initPage = (mission) => {
   return (dispatch) => {
